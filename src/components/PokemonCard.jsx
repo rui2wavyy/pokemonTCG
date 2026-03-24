@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './PokemonCard.css'
 
-export function PokemonCard({ card, label = '', isFlipped = false }) {
+export function PokemonCard({ card, label = '', isRevealed = true, isPlayerCard = false }) {
   const [displayImage, setDisplayImage] = useState(null)
 
   // Image lazy loading: display small first, preload large in background
@@ -59,7 +59,7 @@ export function PokemonCard({ card, label = '', isFlipped = false }) {
   return (
     <div className="pokemon-card-container">
       {label && <p className="card-label">{label}</p>}
-      <div className={`pokemon-card ${isFlipped ? 'flipped' : ''}`}>
+      <div className={`pokemon-card ${isPlayerCard ? 'player-card' : 'enemy-card'}`}>
         <div className="card-inner">
           {displayImage && (
             <img 
@@ -71,7 +71,11 @@ export function PokemonCard({ card, label = '', isFlipped = false }) {
           )}
           <div className="card-info">
             <h3>{card.name}</h3>
-            <p className="card-hp">HP: {card.hp}</p>
+            {isRevealed ? (
+              <p className="card-hp">HP: {card.hp}</p>
+            ) : (
+              <p className="card-hp card-hp-hidden">[?????]</p>
+            )}
           </div>
         </div>
       </div>

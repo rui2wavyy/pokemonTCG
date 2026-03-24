@@ -4,26 +4,25 @@
   left: 50%;
   transform: translateX(-50%);
   padding: 20px 28px;
-  border-radius: 8px;
-  box-shadow: var(--shadow-lg);
-  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideIn 0.3s steps(4);
   z-index: 1000;
   max-width: 90%;
-  border-left: 5px solid;
+  border: 2px solid #0d0d0d;
+  background: #2a2a2a;
+  color: #a8a8a8;
   font-weight: 600;
-  border: 3px solid;
 }
 
 .result-message.correct {
-  background: #0a0a0a;
-  color: #00ff00;
-  border-color: #00ff00;
+  background: #2a2a2a;
+  color: #a8a8a8;
+  border-color: #0d0d0d;
 }
 
 .result-message.incorrect {
-  background: #0a0a0a;
-  color: #ffff00;
-  border-color: #ff0000;
+  background: #2a2a2a;
+  color: #a8a8a8;
+  border-color: #0d0d0d;
 }
 
 .result-content {
@@ -32,25 +31,25 @@
 
 .result-message h3 {
   margin: 0 0 8px 0;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 900;
 }
 
 .result-detail {
   margin: 6px 0;
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 
 .result-hp {
   margin: 6px 0;
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 
 .points-earned {
   margin: 10px 0 0 0;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 700;
-  animation: bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: flicker 0.2s steps(2);
 }
 
 @keyframes slideIn {

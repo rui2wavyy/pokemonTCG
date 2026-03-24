@@ -5,19 +5,11 @@
 }
 
 :root {
-  --primary: #ff0000;
-  --secondary: #0000ff;
-  --accent: #ffff00;
-  --success: #00ff00;
-  --danger: #ff0000;
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #050505;
-  --bg-tertiary: #1a1a1a;
-  --text-primary: #ffffff;
-  --text-secondary: #cccccc;
-  --text-light: #999999;
-  --border-color: #333333;
-  --transition: all 0.1s linear;
+  --darkest: #0d0d0d;
+  --dark: #2a2a2a;
+  --mid: #4f4f4f;
+  --light: #a8a8a8;
+  --transition: background-color 0.1s steps(1), color 0.1s steps(1);
 }
 
 html {
@@ -29,10 +21,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: var(--bg-secondary);
-  color: var(--text-primary);
-  font-size: 16px;
-  line-height: 1.6;
+  background: #0d0d0d;
+  color: #a8a8a8;
+  font-size: 20px;
+  line-height: 1.4;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 }
@@ -45,7 +37,9 @@ body {
 button {
   font-family: 'Press Start 2P', 'Courier New', monospace;
   cursor: pointer;
-  border: 3px solid;
+  border: 2px solid #0d0d0d;
+  background: #4f4f4f;
+  color: #a8a8a8;
   transition: var(--transition);
 }
 
@@ -57,26 +51,26 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Press Start 2P', 'Courier New', monospace;
   font-weight: 900;
-  color: var(--text-primary);
+  color: #a8a8a8;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 32px;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 1.875rem;
+  font-size: 28px;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 20px;
 }
 
 code {
-  font-size: 15px;
+  font-size: 20px;
   line-height: 135%;
   padding: 4px 8px;
-  background: var(--bg-tertiary);
+  background: #2a2a2a;
 }
 

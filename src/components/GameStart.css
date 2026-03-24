@@ -3,44 +3,44 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #000000;
+  background: #0d0d0d;
   padding: 20px;
 }
 
 .start-content {
-  background: #1a1a1a;
+  background: #2a2a2a;
   padding: 60px 40px;
   max-width: 700px;
   text-align: center;
-  border: 4px solid #ffff00;
+  border: 2px solid #0d0d0d;
 }
 
 .game-title {
-  font-size: 2rem;
+  font-size: 28px;
   margin: 0 0 12px 0;
-  color: #ffff00;
+  color: #a8a8a8;
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .game-subtitle {
-  font-size: 1rem;
-  color: #ffffff;
+  font-size: 16px;
+  color: #a8a8a8;
   margin: 0 0 40px 0;
   font-weight: 600;
 }
 
 .game-rules {
-  background: #0a0a0a;
+  background: #1a1a1a;
   padding: 24px;
   margin: 30px 0;
   text-align: left;
-  border: 3px solid #ff0000;
+  border: 2px solid #0d0d0d;
 }
 
 .game-rules h2 {
-  font-size: 1rem;
-  color: #ffff00;
+  font-size: 20px;
+  color: #a8a8a8;
   margin: 0 0 16px 0;
   font-weight: 900;
 }
@@ -53,8 +53,8 @@
 
 .game-rules li {
   padding: 10px 0;
-  color: #ffffff;
-  font-size: 0.75rem;
+  color: #a8a8a8;
+  font-size: 14px;
   position: relative;
   padding-left: 20px;
 }
@@ -63,52 +63,60 @@
   content: '>';
   position: absolute;
   left: 0;
-  color: #ffff00;
+  color: #4f4f4f;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 14px;
 }
 
 .start-stats {
-  background: #0a0a0a;
-  color: #ffffff;
+  background: #1a1a1a;
+  color: #a8a8a8;
   padding: 20px;
   margin: 30px 0;
-  font-size: 0.75rem;
-  border: 3px solid #0000ff;
+  font-size: 14px;
+  border: 2px solid #0d0d0d;
 }
 
 .start-stats p {
   margin: 10px 0;
-  color: #cccccc;
+  color: #a8a8a8;
 }
 
 .start-stats strong {
-  color: #ffff00;
+  color: #a8a8a8;
   font-weight: 700;
 }
 
 .start-button {
-  background: #ff0000;
-  color: #ffffff;
-  border: 4px solid #ffff00;
+  background: #4f4f4f;
+  color: #a8a8a8;
+  border: 2px solid #0d0d0d;
   padding: 16px 48px;
-  font-size: 0.9rem;
+  font-size: 14px;
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-top: 30px;
 }
 
 .start-button:hover:not(:disabled) {
-  background: #ffff00;
-  color: #000000;
-  transform: translate(-2px, -2px);
+  background: #4f4f4f;
+  color: #a8a8a8;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .start-button:active:not(:disabled) {
-  transform: translate(0, 0);
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+  position: relative;
+  top: 2px;
+  left: 2px;
 }
 
 .start-button:disabled {

@@ -177,13 +177,15 @@ export function GameBoard() {
 
         <div className="cards-section">
           <div className="current-card-wrapper">
-            <PokemonCard card={currentCard} label="Current Card" />
+            <p className="card-owner">YOUR CARD</p>
+            <PokemonCard card={currentCard} label="Current" isRevealed={true} isPlayerCard={true} />
           </div>
 
           <div className="vs-separator">VS</div>
 
           <div className="next-card-wrapper">
-            <PokemonCard card={nextCard} label="Next Card" isFlipped={!showResult} />
+            <p className="card-owner">ENEMY CARD</p>
+            <PokemonCard card={nextCard} label="Next" isRevealed={showResult} isPlayerCard={false} />
           </div>
         </div>
 
