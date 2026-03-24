@@ -8,9 +8,10 @@ export const pokemonApi = createApi({
   endpoints: (builder) => ({
     getRandomCards: builder.query({
       query: (limit = 100) => {
-        // Get random cards with HP data - optimized query
-        const randomPage = Math.floor(Math.random() * 30)
-        return `/cards?q=hp:[* TO *]&pageSize=${limit}&page=${randomPage}&select=id,name,hp,images`
+        // Simple, reliable query - just get a random page of cards
+        // The API will return various cards; we filter for those with HP client-side
+        const randomPage = Math.floor(Math.random() * 50)
+        return `/cards?pageSize=${limit}&page=${randomPage}`
       },
       transformResponse: (response) => {
         // Validate response structure
@@ -23,11 +24,12 @@ export const pokemonApi = createApi({
           .filter((card) => card.hp && card.images?.small)
           .map((card) => ({
             id: card.id,
-            name: card.name,
-            hp: parseInt(card.hp) || 0,
+            name: card.name || 'Unknown Card',
+            hp: parseInt(card.hp) || 50,
             image: card.images.small, // Use small images for faster loading
-            largImage: card.images.large, // Store large image for later lazy load
+            largeImage: card.images.large, // Store large image for later lazy load
           }))
+          .sort(() => Math.random() - 0.5) // Randomize order on client
 
         if (cards.length === 0) {
           throw new Error('No valid Pokémon cards found. Please try again.')
@@ -41,4 +43,4 @@ export const pokemonApi = createApi({
   }),
 })
 
-export const { useGetRandomCardsQuery, useGetPreloadedCardsQuery, util: { prefetchGetRandomCards, prefetchGetPreloadedCards } } = pokemonApi
+export const { useGetRandomCardsQuery } = pokemonApi

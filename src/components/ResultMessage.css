@@ -15,15 +15,15 @@
 }
 
 .result-message.correct {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(16, 185, 129, 0.1) 100%);
-  color: #10b981;
-  border-color: #10b981;
+  background: #0a0a0a;
+  color: #00ff00;
+  border-color: #00ff00;
 }
 
 .result-message.incorrect {
-  background: linear-gradient(135deg, rgba(233, 69, 96, 0.2) 0%, rgba(220, 52, 69, 0.1) 100%);
-  color: #fbbf24;
-  border-color: #e94560;
+  background: #0a0a0a;
+  color: #ffff00;
+  border-color: #ff0000;
 }
 
 .result-content {

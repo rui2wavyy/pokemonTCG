@@ -15,11 +15,11 @@ export function PokemonCard({ card, label = '', isFlipped = false }) {
     setDisplayImage(card.image)
 
     // Preload large image in background
-    if (card.largImage) {
+    if (card.largeImage) {
       const img = new Image()
       img.onload = () => {
         if (isMounted) {
-          setDisplayImage(card.largImage)
+          setDisplayImage(card.largeImage)
         }
       }
       img.onerror = () => {
@@ -28,13 +28,13 @@ export function PokemonCard({ card, label = '', isFlipped = false }) {
           setDisplayImage(card.image)
         }
       }
-      img.src = card.largImage
+      img.src = card.largeImage
     }
 
     return () => {
       isMounted = false
     }
-  }, [card?.id, card?.image, card?.largImage])
+  }, [card?.id, card?.image, card?.largeImage])
 
   // Show placeholder if card is not yet loaded
   if (!card) {

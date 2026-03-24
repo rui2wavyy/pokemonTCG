@@ -4,7 +4,7 @@ export function GameStart({ onStart, isLoading = false, error = null }) {
   return (
     <div className="game-start">
       <div className="start-content">
-        <h1 className="game-title">🎴 Pokémon HP Predictor</h1>
+        <h1 className="game-title">Pokémon HP Predictor</h1>
         <p className="game-subtitle">Guess if the next Pokémon's HP will be higher or lower!</p>
 
         <div className="game-rules">
@@ -23,7 +23,7 @@ export function GameStart({ onStart, isLoading = false, error = null }) {
           <p>Streak Bonus: <strong>+2 per streak</strong></p>
         </div>
 
-        {error && <div style={{ color: '#dc2626', fontSize: '0.95rem', marginBottom: '16px' }}>⚠️ {error}</div>}
+        {error && <div style={{ color: '#dc2626', fontSize: '0.95rem', marginBottom: '16px' }}>{error}</div>}
 
         <button 
           className="start-button" 

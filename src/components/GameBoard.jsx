@@ -136,7 +136,7 @@ export function GameBoard() {
     return (
       <div className="game-error">
         <div className="error-content">
-          <h2>⚠️ {gameError}</h2>
+          <h2>{gameError}</h2>
           <button className="retry-button" onClick={handleGameOver}>
             Back to Menu
           </button>
@@ -171,7 +171,7 @@ export function GameBoard() {
       />
 
       <div className="game-container">
-        <h1 className="game-header">🎴 Pokémon HP Predictor</h1>
+        <h1 className="game-header">Pokémon HP Predictor</h1>
 
         <ScoreDisplay score={score} streak={streak} totalGuesses={totalGuesses} />
 
